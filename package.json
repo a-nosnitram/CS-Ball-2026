@@ -2,6 +2,7 @@
   "name": "maskarrayde",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://a-nosnitram.github.io/CS-Ball-2026",
   "dependencies": {
     "@react-three/drei": "^9.92.7",
     "@react-three/fiber": "^8.15.12",
