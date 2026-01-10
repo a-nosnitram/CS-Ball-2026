@@ -4,7 +4,9 @@ import { Environment, useGLTF } from "@react-three/drei";
 import "./App.css";
 
 function MaskModel({ mousePosition }) {
-  const { scene } = useGLTF("/masks/venetian_jester_mask.glb");
+  const { scene } = useGLTF(
+    `${process.env.PUBLIC_URL}/masks/venetian_jester_mask.glb`
+  );
   const meshRef = useRef();
 
   // make materials opaque bc they load as transparent for some reason
