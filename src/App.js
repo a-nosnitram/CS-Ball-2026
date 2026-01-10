@@ -1,6 +1,6 @@
-import React, { Suspense, useRef, useState, useEffect } from "react";
+import { Suspense, useRef, useState, useEffect } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
-import { Environment, useGLTF, Html } from "@react-three/drei";
+import { Environment, useGLTF } from "@react-three/drei";
 import "./App.css";
 
 function MaskModel({ mousePosition, onLoaded }) {
