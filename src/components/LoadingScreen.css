@@ -1,17 +1,3 @@
-:root {
-  --color-burgundy: #620b1b;
-  --color-dark: #1d1c1c;
-  --color-gold: #c49541;
-  --color-red: #a31f20;
-  --color-cream: #e9e2d5;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 .loading-screen {
   position: fixed;
   top: 0;
@@ -66,29 +52,11 @@
   font-style: italic;
 }
 
-.App {
-  width: 100vw;
-  height: 100vh;
-  overflow-y: scroll;
-  scroll-snap-type: y mandatory;
-  scroll-behavior: smooth;
-}
-
 @keyframes spin {
   0% {
     transform: rotate(0deg);
   }
   100% {
     transform: rotate(360deg);
-  }
-}
-
-@media (max-width: 768px) {
-  .header-content h1 {
-    font-size: 2.5rem;
-  }
-
-  .header-content p {
-    font-size: 1.2rem;
   }
 }

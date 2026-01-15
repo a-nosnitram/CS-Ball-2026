@@ -1,0 +1,31 @@
+.about-section {
+  width: 100vw;
+  height: 100vh;
+  background: var(--color-cream);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  scroll-snap-align: start;
+}
+
+.about-content {
+  max-width: 800px;
+  padding: 2rem;
+  color: var(--color-dark);
+}
+
+.about-content h2 {
+  font-size: 3rem;
+  font-weight: 400;
+  margin-bottom: 2rem;
+  color: var(--color-burgundy);
+  font-family: "Jacquard 12", serif;
+  letter-spacing: 0.05em;
+}
+
+.about-content p {
+  font-size: 1.3rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  color: var(--color-dark);
+}
