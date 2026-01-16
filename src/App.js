@@ -2,7 +2,6 @@ import { useState } from "react";
 import LoadingScreen from "./components/LoadingScreen";
 import HeroSection from "./components/HeroSection";
 import AboutSection from "./components/AboutSection";
-import CloudsSection from "./components/CloudsSection";
 import { useGLTF } from "@react-three/drei";
 import "./App.css";
 
@@ -41,7 +40,6 @@ function App() {
           onLearnMoreClick={scrollToNextSection}
         />
         <AboutSection />
-        <CloudsSection />
       </div>
     </>
   );
