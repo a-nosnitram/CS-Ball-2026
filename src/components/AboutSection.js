@@ -109,7 +109,12 @@ function AboutSection() {
   ];
 
   return (
-    <section id="about-section" className="about-section" ref={sectionRef}>
+    <section
+      id="about-section"
+      className="about-section"
+      data-logo-color="burgundy"
+      ref={sectionRef}
+    >
       <div className="about-snap about-snap--top" aria-hidden="true" />
       <div className="about-snap about-snap--bottom" aria-hidden="true" />
       <div className="about-sticky">
@@ -149,7 +154,7 @@ function AboutSection() {
         {/* Fixed content in center */}
         <div className="about-content fixed-content">
           <div className={`about-copy ${isAtEnd ? "is-hidden" : "is-visible"}`}>
-            <h2>Info about CS BAll</h2>
+            <h2>Info about CS ball</h2>
             <p>
               sdbd edhebdhf hadbsad jfjjfg jsdb dhd qasjfjds ajbdj sjs dasjsd
               asdjsabjd dajldas dsajds djf dhej paa dpw pc apdscmed odfpamw pd

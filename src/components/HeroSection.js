@@ -6,7 +6,7 @@ import "./HeroSection.css";
 
 function HeroSection({ mousePosition, onLoaded, onLearnMoreClick }) {
   return (
-    <section className="hero-section">
+    <section className="hero-section" data-logo-color="hidden">
       <div className="canvas-container">
         <Canvas
           camera={{ position: [0, 0, 5], fov: 50 }}
@@ -28,7 +28,7 @@ function HeroSection({ mousePosition, onLoaded, onLearnMoreClick }) {
       </div>
 
       <div className="header-content">
-        <h1>Mask [array] de</h1>
+        <h1>Subnet Mask [array] de</h1>
         <p>This is CS ball and it's a masquerade</p>
       </div>
 

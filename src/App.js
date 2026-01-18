@@ -2,6 +2,7 @@ import { useState } from "react";
 import LoadingScreen from "./components/LoadingScreen";
 import HeroSection from "./components/HeroSection";
 import AboutSection from "./components/AboutSection";
+import Logo from "./components/Logo";
 import { useGLTF } from "@react-three/drei";
 import "./App.css";
 
@@ -33,6 +34,7 @@ function App() {
   return (
     <>
       {isLoading && <LoadingScreen fadeOut={fadeOut} />}
+      <Logo />
       <div className="App" onMouseMove={handleMouseMove}>
         <HeroSection
           mousePosition={mousePosition}
