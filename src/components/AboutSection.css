@@ -185,11 +185,12 @@
   .program-list {
     gap: 2vh;
   }
-  /*
+
   .cloud {
-    scale: 0.5;
-    opacity: 1;
-  } */
+    display: none;
+    /* scale: 0.5;
+    opacity: 1; */
+  }
 }
 
 @media (max-width: 480px) {
@@ -224,8 +225,7 @@
     z-index: 3;
   }
 
-  /* .cloud {
-    scale: 0.5;
-    opacity: 1;
-  } */
+  .cloud {
+    display: none;
+  }
 }

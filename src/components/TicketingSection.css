@@ -9,6 +9,7 @@
   padding: 4rem 2rem;
   scroll-snap-align: start;
   z-index: 10;
+  box-sizing: border-box;
 }
 
 .ticketing-content {
@@ -95,39 +96,85 @@
 
 /* Responsive */
 @media (max-width: 768px) {
-  .ticketing-title {
-    font-size: 2.5rem;
+  .ticketing-section {
+    padding: 2rem 0.5rem;
+    height: auto;
+    min-height: 100vh;
+    align-items: flex-start;
+    overflow-y: auto;
   }
-
+  .ticketing-content {
+    padding: 0 0.5rem;
+  }
+  .ticketing-title {
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+  }
   .ticket-info {
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
+    gap: 1.2rem;
+    margin-bottom: 2rem;
   }
-
   .ticket-tier {
     max-width: 100%;
+    min-width: 0;
+    padding: 1.2rem 1rem;
+    margin: 0 auto;
   }
-
   .ticket-tier h3 {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
-
   .ticket-tier .price {
-    font-size: 2.5rem;
+    font-size: 2rem;
+  }
+  .ticket-tier .details {
+    font-size: 0.95rem;
+  }
+  .ticket-note {
+    margin-top: 1.5rem;
+  }
+  .ticket-tier:hover {
+    transform: translateY(-0px);
   }
 }
 
 @media (max-width: 480px) {
+  .ticket-tier:hover {
+    transform: translateY(-0px);
+  }
+  .ticketing-section {
+    padding: 1.2rem 0.2rem;
+  }
   .ticketing-title {
-    font-size: 2rem;
+    margin-top: 15%;
+    font-size: 2.5rem;
+    margin-bottom: 1.2rem;
   }
-
+  .ticket-info {
+    gap: 1rem !important;
+    margin-bottom: 1.2rem;
+  }
   .ticket-tier {
-    min-width: 100%;
-    padding: 1.5rem;
+    min-width: 80%;
+    padding: 0.9rem 0.5rem;
+    border-radius: 10px;
   }
-
+  .ticket-tier h3 {
+    font-size: 1.5rem;
+  }
+  .ticket-tier .price {
+    font-size: 1.5rem;
+    margin-bottom: 0.7rem;
+  }
+  .ticket-tier .details {
+    font-size: 0.85rem;
+    margin-bottom: 0.2rem;
+  }
+  .ticket-note {
+    margin-top: 1rem;
+  }
   .ticket-note p {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
   }
 }
