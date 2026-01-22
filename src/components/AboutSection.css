@@ -4,6 +4,7 @@
   background: var(--color-cream);
   position: relative;
   scroll-snap-align: start;
+  overflow: visible;
 }
 
 .about-snap {
@@ -14,6 +15,7 @@
   scroll-snap-align: start;
   scroll-snap-stop: always;
   pointer-events: none;
+  overflow-y: visible;
 }
 
 .about-snap--top {
@@ -22,6 +24,7 @@
 
 .about-snap--bottom {
   top: 100vh;
+  overflow-y: visibles;
 }
 
 .about-sticky {
@@ -29,7 +32,7 @@
   top: 0;
   height: 100vh;
   width: 100%;
-  overflow: hidden;
+  overflow: visible;
   background: var(--color-cream);
 }
 
@@ -51,13 +54,14 @@
 }
 
 .clouds-container {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   pointer-events: none;
   z-index: 2;
+  overflow: visible;
 }
 
 .cloud {

@@ -1,0 +1,133 @@
+.ticketing-section {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--color-dark);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 2rem;
+  scroll-snap-align: start;
+  z-index: 10;
+}
+
+.ticketing-content {
+  max-width: 1200px;
+  width: 100%;
+  text-align: center;
+}
+
+.ticketing-title {
+  font-family: "Jacquard 12", serif;
+  font-size: 6rem;
+  font-weight: 400;
+  color: var(--color-gold);
+  margin-bottom: 3rem;
+}
+
+.ticket-info {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+}
+
+.ticket-tier {
+  border: 2px solid var(--color-gold);
+  border-radius: 16px;
+  padding: 2rem;
+  min-width: 280px;
+  flex: 1;
+  max-width: 320px;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.ticket-tier:hover {
+  transform: translateY(-8px);
+  /* box-shadow: 0 8px 30px rgba(196, 149, 65, 0.3); */
+  box-shadow: 0 8px 30px rgba(12, 9, 4, 0.479);
+}
+
+.ticket-tier.highlighted {
+  border-color: var(--color-burgundy);
+  /* background: rgba(98, 11, 27, 0.1); */
+}
+
+.ticket-tier h3 {
+  font-family: "Jacquard 12", serif;
+  font-size: 2rem;
+  font-weight: 300;
+  color: var(--color-cream);
+  margin-bottom: 1rem;
+}
+
+.ticket-tier .price {
+  font-family: "Jacquard 12", serif;
+  font-size: 3rem;
+  color: var(--color-gold);
+  margin-bottom: 1.5rem;
+}
+
+.ticket-tier .details {
+  font-family: "Fenix", serif;
+  font-size: 1rem;
+  color: var(--color-cream);
+  opacity: 0.8;
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+.ticket-note {
+  margin-top: 2rem;
+}
+
+.ticket-note p {
+  font-family: "Fenix", serif;
+  font-size: 1.1rem;
+  color: var(--color-cream);
+  opacity: 0.7;
+  margin-bottom: 0.5rem;
+  font-style: italic;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .ticketing-title {
+    font-size: 2.5rem;
+  }
+
+  .ticket-info {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .ticket-tier {
+    max-width: 100%;
+  }
+
+  .ticket-tier h3 {
+    font-size: 1.5rem;
+  }
+
+  .ticket-tier .price {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .ticketing-title {
+    font-size: 2rem;
+  }
+
+  .ticket-tier {
+    min-width: 100%;
+    padding: 1.5rem;
+  }
+
+  .ticket-note p {
+    font-size: 0.9rem;
+  }
+}

@@ -6,6 +6,7 @@ import Logo from "./components/Logo";
 import { useGLTF } from "@react-three/drei";
 import "./App.css";
 import CountdownSection from "./components/CountdownSection";
+import TicketingSection from "./components/TicketingSection";
 
 function App() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -43,6 +44,7 @@ function App() {
           onLearnMoreClick={scrollToNextSection}
         />
         <AboutSection />
+        <TicketingSection />
         <CountdownSection />
       </div>
     </>
