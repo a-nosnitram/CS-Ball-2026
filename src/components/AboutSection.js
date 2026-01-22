@@ -5,7 +5,7 @@ import "./AboutSection.css";
 function AboutSection() {
   const [scrollProgress, setScrollProgress] = useState(0);
   const [isAtEnd, setIsAtEnd] = useState(false);
-  const [cloudsExitProgress, setCloudsExitProgress] = useState(0);
+  // const [cloudsExitProgress, setCloudsExitProgress] = useState(0);
   const sectionRef = useRef(null);
 
   useEffect(() => {
@@ -30,19 +30,19 @@ function AboutSection() {
       setScrollProgress(progress);
       setIsAtEnd(clamped >= 0.98);
 
-      // Calculate how much of the section is visible
-      const rect = sectionRef.current.getBoundingClientRect();
-      const visibleHeight =
-        Math.min(rect.bottom, viewportHeight) - Math.max(rect.top, 0);
-      const visiblePercentage = visibleHeight / viewportHeight;
+      // // Calculate how much of the section is visible
+      // const rect = sectionRef.current.getBoundingClientRect();
+      // const visibleHeight =
+      //   Math.min(rect.bottom, viewportHeight) - Math.max(rect.top, 0);
+      // const visiblePercentage = visibleHeight / viewportHeight;
 
-      // move clouds up when less than 49% visible
-      if (visiblePercentage < 0.49 && rect.top < 0) {
-        const exitProgress = Math.max(0, (0.49 - visiblePercentage) / 0.49);
-        setCloudsExitProgress(exitProgress);
-      } else {
-        setCloudsExitProgress(0);
-      }
+      // // move clouds up when less than 49% visible
+      // if (visiblePercentage < 0.49 && rect.top < 0) {
+      //   const exitProgress = Math.max(0, (0.49 - visiblePercentage) / 0.49);
+      //   setCloudsExitProgress(exitProgress);
+      // } else {
+      //   setCloudsExitProgress(0);
+      // }
     };
 
     scrollContainer.addEventListener("scroll", handleScroll, { passive: true });
