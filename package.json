@@ -2,7 +2,7 @@
   "name": "maskarrayde",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://a-nosnitram.github.io/CS-Ball-2026",
+  "homepage": "https://csball2026.rocks/",
   "dependencies": {
     "@react-three/drei": "^9.92.7",
     "@react-three/fiber": "^8.15.12",
