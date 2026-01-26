@@ -163,17 +163,15 @@ function AboutSection() {
           <div className={`about-copy ${isAtEnd ? "is-hidden" : "is-visible"}`}>
             <h2>Info about CS ball</h2>
             <p>
-              sdbd edhebdhf hadbsad jfjjfg jsdb dhd qasjfjds ajbdj sjs dasjsd
-              asdjsabjd dajldas dsajds djf dhej paa dpw pc apdscmed odfpamw pd
-              wpqldnd...
+              Hello there, stranger. Are you ready for a night of intrigue
+              you'll never forget? Join us to fine dine, dance, and wine!
             </p>
             <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard
+              It's a night you won't want to miss. Allow us dazzle you. All you
+              need to bring is your fine self, and a mask to match.
             </p>
           </div>
           <div className={`about-copy ${isAtEnd ? "is-visible" : "is-hidden"}`}>
-            {/* <h2>Programme</h2> */}
             <div className="program-list">
               <ProgramItem
                 align="right"
