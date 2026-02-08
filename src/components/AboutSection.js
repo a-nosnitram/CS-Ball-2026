@@ -8,36 +8,31 @@ function AboutSection() {
   const sectionRef = useRef(null);
 
   useEffect(() => {
-    const scrollContainer = document.querySelector(".App");
-    if (!scrollContainer) return;
-
-    const handleScroll = () => {
-      if (!sectionRef.current) return;
-
-      const scrollTop = scrollContainer.scrollTop;
-      const viewportHeight = scrollContainer.clientHeight;
-      const sectionTop = sectionRef.current.offsetTop;
-      const sectionHeight = sectionRef.current.offsetHeight;
-
-      const scrolled =
-        (scrollTop - sectionTop) / (sectionHeight - viewportHeight);
-      const clamped = Math.max(0, Math.min(1, scrolled));
-
-      // reveal clouds/gradient in the second half of the section to create illusion of 2 sections
-      // but it's actually just one big section hahahhahah
-      const progress = Math.max(0, (clamped - 0.5) / 0.5);
-      setScrollProgress(progress);
-      setIsAtEnd(clamped >= 0.98);
-    };
-
-    scrollContainer.addEventListener("scroll", handleScroll, { passive: true });
-    window.addEventListener("resize", handleScroll);
-    handleScroll();
-
-    return () => {
-      scrollContainer.removeEventListener("scroll", handleScroll);
-      window.removeEventListener("resize", handleScroll);
-    };
+    /* SCHEDULE: uncomment after add schedule */
+    // const scrollContainer = document.querySelector(".App");
+    // if (!scrollContainer) return;
+    // const handleScroll = () => {
+    //   if (!sectionRef.current) return;
+    //   const scrollTop = scrollContainer.scrollTop;
+    //   const viewportHeight = scrollContainer.clientHeight;
+    //   const sectionTop = sectionRef.current.offsetTop;
+    //   const sectionHeight = sectionRef.current.offsetHeight;
+    //   const scrolled =
+    //     (scrollTop - sectionTop) / (sectionHeight - viewportHeight);
+    //   const clamped = Math.max(0, Math.min(1, scrolled));
+    //   // reveal clouds/gradient in the second half of the section to create illusion of 2 sections
+    //   // but it's actually just one big section hahahhahah
+    //   const progress = Math.max(0, (clamped - 0.5) / 0.5);
+    //   setScrollProgress(progress);
+    //   setIsAtEnd(clamped >= 0.98);
+    // };
+    // scrollContainer.addEventListener("scroll", handleScroll, { passive: true });
+    // window.addEventListener("resize", handleScroll);
+    // handleScroll();
+    // return () => {
+    //   scrollContainer.removeEventListener("scroll", handleScroll);
+    //   window.removeEventListener("resize", handleScroll);
+    // };
   }, []);
 
   const clouds = [
@@ -177,7 +172,8 @@ function AboutSection() {
               a night you won’t want to miss.
             </p>
           </div>
-          <div className={`about-copy ${isAtEnd ? "is-visible" : "is-hidden"}`}>
+          {/* SCHEDULE: uncomment after add schedule */}
+          {/* <div className={`about-copy ${isAtEnd ? "is-visible" : "is-hidden"}`}>
             <div className="program-list">
               <ProgramItem
                 align="right"
@@ -216,7 +212,7 @@ function AboutSection() {
                 offsetX="5rem"
               />
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

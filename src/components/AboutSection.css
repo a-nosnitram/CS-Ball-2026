@@ -1,6 +1,8 @@
 .about-section {
   width: 100vw;
-  height: 200vh;
+  /* height: 200vh; */
+  /* SCHEDULE: fix after add schedule */
+  height: 100vh;
   background: var(--color-cream);
   position: relative;
   scroll-snap-align: start;
