@@ -36,8 +36,8 @@
     black 70%
   );
   mask-image: radial-gradient(ellipse at center, transparent 30%, black 70%);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
 .header-content {
