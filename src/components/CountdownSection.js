@@ -10,8 +10,8 @@ function CountdownSection() {
   });
 
   useEffect(() => {
-    const dropDate = new Date("2026-02-14T20:00:00"); // CS Ball date
-
+    // drop date is 12pm 27 feb GMT
+    const dropDate = new Date("2026-02-27T12:00:00Z");
     const calculateTimeLeft = () => {
       const now = new Date();
       const timeDiff = dropDate - now;
