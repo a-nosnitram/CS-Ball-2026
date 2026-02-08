@@ -163,12 +163,18 @@ function AboutSection() {
           <div className={`about-copy ${isAtEnd ? "is-hidden" : "is-visible"}`}>
             <h2>Info about CS ball</h2>
             <p>
-              Hello there, stranger. Are you ready for a night of intrigue
-              you'll never forget? Join us to fine dine, dance, and wine!
+              Hey there, stranger. Are you ready for a night of intrigue you
+              won’t soon forget? Join us for an evening of fine dining, dancing,
+              and wine at this year’s CS Ball!
             </p>
             <p>
-              It's a night you won't want to miss. Allow us dazzle you. All you
-              need to bring is your fine self, and a mask to match.
+              Dress to impress and step into the mystery-- whether masked or
+              unmasked. All you need is to bring
+            </p>
+            <p>
+              your finest self. Guests attending will enjoy a full evening of
+              entertainment, music, and atmosphere. Allow us to dazzle you. It’s
+              a night you won’t want to miss.
             </p>
           </div>
           <div className={`about-copy ${isAtEnd ? "is-visible" : "is-hidden"}`}>
