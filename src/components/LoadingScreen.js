@@ -4,11 +4,11 @@ function LoadingScreen({ fadeOut }) {
   return (
     <div className={`loading-screen ${fadeOut ? "fade-out" : ""}`}>
       <div className="loading-content">
-        <h1>maskARRAYde</h1>
+        <h1>CS Ball 2026</h1>
         <div className="loading-spinner"></div>
         <p>The 3d object takes time to render lol...</p>
         <p className="loading-subtext">
-          will have to come up with a better loading screen message
+          If you see this for more than 15 seconds, try refreshing the page.
         </p>
       </div>
     </div>
