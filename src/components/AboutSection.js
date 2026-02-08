@@ -1,10 +1,10 @@
-import { useEffect, useState, useRef } from "react";
-import ProgramItem from "./ProgramItem";
+import { useEffect, useRef } from "react";
+// import ProgramItem from "./ProgramItem";
 import "./AboutSection.css";
 
 function AboutSection() {
-  const [scrollProgress, setScrollProgress] = useState(0);
-  const [isAtEnd, setIsAtEnd] = useState(false);
+  // const [scrollProgress, setScrollProgress] = useState(0);
+  // const [isAtEnd, setIsAtEnd] = useState(false);
   const sectionRef = useRef(null);
 
   useEffect(() => {
@@ -116,9 +116,12 @@ function AboutSection() {
         {/* gradient overlay */}
         <div
           className="gradient-overlay"
-          style={{
-            transform: `translateY(${(1 - scrollProgress) * 100}%)`,
-          }}
+          style={
+            {
+              // SCHEDULE: uncomment after add schedule
+              // transform: `translateY(${(1 - scrollProgress) * 100}%)`,
+            }
+          }
         ></div>
 
         {/* clouds */}
@@ -139,8 +142,9 @@ function AboutSection() {
               style={{
                 "--float-duration": cloud.floatDuration,
                 "--rise-duration": cloud.riseDuration,
-                "--rise-offset": `${(1 - scrollProgress) * 80}px`,
-                "--slide-offset": `${(1 - scrollProgress) * 100}vh`,
+                // SCHEDULE: uncomment after add schedule
+                // "--rise-offset": `${(1 - scrollProgress) * 80}px`,
+                // "--slide-offset": `${(1 - scrollProgress) * 100}vh`,
                 top: cloud.top,
                 bottom: cloud.bottom,
                 opacity: cloud.opacity,
@@ -155,7 +159,9 @@ function AboutSection() {
 
         {/* Fixed content in center */}
         <div className="about-content fixed-content">
-          <div className={`about-copy ${isAtEnd ? "is-hidden" : "is-visible"}`}>
+          {/* SCHEDULE: UNCOMMENT AND REPLACE */}
+          {/* <div className={`about-copy ${isAtEnd ? "is-hidden" : "is-visible"}`}> */}
+          <div className={`about-copy is-visible`}>
             <h2>Info about CS ball</h2>
             <p>
               Hey there, stranger. Are you ready for a night of intrigue you
