@@ -72,6 +72,7 @@
   transition: transform var(--rise-duration, 0.9s) ease-out;
   transform: translateY(var(--slide-offset, 120px));
   animation: float var(--float-duration, 8s) ease-in-out infinite;
+  display: none; /* SCHEDULE: fix after add schedule */
 }
 
 @keyframes float {
