@@ -55,6 +55,8 @@
   font-weight: 400;
   font-family: "Jacquard 12", serif;
   color: var(--color-gold);
+  padding-top: 0.5rem;
+  line-height: 0.7;
 }
 
 .header-content p {
