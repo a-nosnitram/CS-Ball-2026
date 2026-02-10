@@ -68,7 +68,8 @@ function Logo() {
         <path d="M440 321H396.594V299.874H419.66V121.883H396.594V101H440V321Z" />
       </svg>
       <div className="logo-text" style={{ color: `var(--color-${color})` }}>
-        Subnet Mask [array] de - CS ball 2026
+        {/* Subnet Mask [array] de - CS ball 2026 */}
+        April 4th - Upper and Lower College Hall
       </div>
     </div>
   );
