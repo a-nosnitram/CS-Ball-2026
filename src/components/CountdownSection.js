@@ -67,6 +67,13 @@ function CountdownSection() {
           </div>
         </div>
       </div>
+      {/* redirect to ticket purchase page */}
+      <a
+        href="https://buytickets.at/computerscienceball2025/2062693"
+        className="buy-tickets-link"
+      >
+        <b className="buy-tickets-btn"> Buy tickets </b>
+      </a>
     </section>
   );
 }
