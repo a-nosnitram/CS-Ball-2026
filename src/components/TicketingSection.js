@@ -8,11 +8,12 @@ function TicketingSection() {
         <div className="ticket-info">
           <div className="ticket-tier">
             <div className="ticket-tier-col1">
-              <h3>Regular</h3>
+              <h3>Early Bird</h3>
               <p className="price">£40.5</p>
             </div>
             <div className="ticket-tier-col2">
               <p className="details">
+                Dinner + Afterparty <br />
                 Limited Availability, <br />
                 get it while you can!
               </p>
@@ -26,6 +27,7 @@ function TicketingSection() {
             </div>
             <div className="ticket-tier-col2">
               <p className="details">
+                Dinner + Afterparty <br />
                 Includes: three-course meal,
                 <br /> wine, and the after-party!
               </p>
@@ -39,9 +41,9 @@ function TicketingSection() {
             </div>
             <div className="ticket-tier-col2">
               <p className="details">
-                Includes: ceilidh, poker, DJ, <br /> and photography all night!
+                Includes: ceilidh, DJ, <br /> and photography all night!
               </p>
-              <p className="details">Drop date unknown</p>
+              <p className="details">Drop on Feb 27, 12pm</p>
             </div>
           </div>
         </div>
