@@ -29,7 +29,7 @@ function HeroSection({ mousePosition, onLoaded, onLearnMoreClick }) {
 
       <div className="header-content">
         <h1>Subnet Mask [array] de</h1>
-        <p>Aprin 4th - Upper and Lower College Hall</p>
+        <p>April 4th - Upper and Lower College Hall</p>
       </div>
 
       <button className="learn-more-btn" onClick={onLearnMoreClick}>
