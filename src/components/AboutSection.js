@@ -170,12 +170,10 @@ function AboutSection() {
             </p>
             <p>
               Dress to impress and step into the mystery-- whether masked or
-              unmasked. All you need is to bring
-            </p>
-            <p>
-              your finest self. Guests attending will enjoy a full evening of
-              entertainment, music, and atmosphere. Allow us to dazzle you. It’s
-              a night you won’t want to miss.
+              unmasked. All you need is to bring your finest self. Guests
+              attending will enjoy a full evening of entertainment, music, and
+              atmosphere. Allow us to dazzle you. It’s a night you won’t want to
+              miss.
             </p>
           </div>
           {/* SCHEDULE: uncomment after add schedule */}
