@@ -12,6 +12,12 @@ body {
   overflow: hidden;
 }
 
+html,
+body,
+#root {
+  background-color: var(--color-burgundy);
+}
+
 code {
   font-family: monospace;
 }
