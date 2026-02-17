@@ -10,8 +10,8 @@ function CountdownSection() {
   });
 
   useEffect(() => {
-    // drop date is 12pm 27 feb GMT
-    const dropDate = new Date("2026-02-27T12:00:00Z");
+    // drop date is 12pm 20 feb GMT
+    const dropDate = new Date("2026-02-20T12:00:00Z");
     const calculateTimeLeft = () => {
       const now = new Date();
       const timeDiff = dropDate - now;
