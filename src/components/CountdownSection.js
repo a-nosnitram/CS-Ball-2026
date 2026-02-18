@@ -34,7 +34,7 @@ function CountdownSection() {
 
   return (
     <section className="countdown-section" data-logo-color="gold">
-      <h2 className="countdown-title">Early Bird Tickets</h2>
+      <h2 className="countdown-title">Dinner Tickets</h2>
       <div className="countdown-timer">
         <p className="countdown-subtitle">will drop in...</p>
         <div className="timer">
