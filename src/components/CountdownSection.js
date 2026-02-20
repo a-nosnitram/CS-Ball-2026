@@ -74,6 +74,19 @@ function CountdownSection() {
       >
         <b className="buy-tickets-btn"> Buy tickets </b>
       </a>
+      {/* footer with author credits */}
+      <div className="countdown-footer">
+        <p>
+          Website designed and developed by{" "}
+          <a
+            href="https://linktr.ee/anastasiamartinson"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Anastasia Martinson
+          </a>
+        </p>
+      </div>
     </section>
   );
 }
