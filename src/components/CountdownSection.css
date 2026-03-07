@@ -167,6 +167,10 @@
   .time-segment .label {
     font-size: 0.8rem;
   }
+
+  .buy-tickets-btn {
+    margin-bottom: 1rem;
+  }
 }
 
 @media (max-width: 480px) {
