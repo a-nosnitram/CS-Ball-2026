@@ -1,39 +1,39 @@
-import { useEffect, useRef } from "react";
-// import ProgramItem from "./ProgramItem";
+import { useEffect, useRef, useState } from "react";
+import ProgramItem from "./ProgramItem";
 import "./AboutSection.css";
 
 function AboutSection() {
-  // const [scrollProgress, setScrollProgress] = useState(0);
-  // const [isAtEnd, setIsAtEnd] = useState(false);
+  const [scrollProgress, setScrollProgress] = useState(0);
   const sectionRef = useRef(null);
 
   useEffect(() => {
-    /* SCHEDULE: uncomment after add schedule */
-    // const scrollContainer = document.querySelector(".App");
-    // if (!scrollContainer) return;
-    // const handleScroll = () => {
-    //   if (!sectionRef.current) return;
-    //   const scrollTop = scrollContainer.scrollTop;
-    //   const viewportHeight = scrollContainer.clientHeight;
-    //   const sectionTop = sectionRef.current.offsetTop;
-    //   const sectionHeight = sectionRef.current.offsetHeight;
-    //   const scrolled =
-    //     (scrollTop - sectionTop) / (sectionHeight - viewportHeight);
-    //   const clamped = Math.max(0, Math.min(1, scrolled));
-    //   // reveal clouds/gradient in the second half of the section to create illusion of 2 sections
-    //   // but it's actually just one big section hahahhahah
-    //   const progress = Math.max(0, (clamped - 0.5) / 0.5);
-    //   setScrollProgress(progress);
-    //   setIsAtEnd(clamped >= 0.98);
-    // };
-    // scrollContainer.addEventListener("scroll", handleScroll, { passive: true });
-    // window.addEventListener("resize", handleScroll);
-    // handleScroll();
-    // return () => {
-    //   scrollContainer.removeEventListener("scroll", handleScroll);
-    //   window.removeEventListener("resize", handleScroll);
-    // };
+    const scrollContainer = document.querySelector(".App");
+    if (!scrollContainer) return;
+    const handleScroll = () => {
+      if (!sectionRef.current) return;
+      const scrollTop = scrollContainer.scrollTop;
+      const viewportHeight = scrollContainer.clientHeight;
+      const sectionTop = sectionRef.current.offsetTop;
+      const sectionHeight = sectionRef.current.offsetHeight;
+      const scrolled =
+        (scrollTop - sectionTop) / (sectionHeight - viewportHeight);
+      const clamped = Math.max(0, Math.min(1, scrolled));
+      // reveal clouds/gradient in the second half of the section to create illusion of 2 sections
+      // but it's actually just one big section hahahhahah
+      const progress = Math.max(0, (clamped - 0.5) / 0.5);
+      setScrollProgress(progress);
+    };
+    scrollContainer.addEventListener("scroll", handleScroll, { passive: true });
+    window.addEventListener("resize", handleScroll);
+    handleScroll();
+    return () => {
+      scrollContainer.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", handleScroll);
+    };
   }, []);
+
+  const scheduleRevealAt = 0.15;
+  const showSchedule = scrollProgress >= scheduleRevealAt;
 
   const clouds = [
     {
@@ -116,52 +116,15 @@ function AboutSection() {
         {/* gradient overlay */}
         <div
           className="gradient-overlay"
-          style={
-            {
-              // SCHEDULE: uncomment after add schedule
-              // transform: `translateY(${(1 - scrollProgress) * 100}%)`,
-            }
-          }
-        ></div>
-
-        {/* clouds */}
-        <div
-          className="clouds-container"
           style={{
-            // transform: `translateY(${-cloudsExitProgress * 100}vh)`,
-            // opacity: 1 - cloudsExitProgress,
-            transition: "transform 0.8s ease-out, opacity 0.8s ease-out",
+            transform: `translateY(${(1 - scrollProgress) * 100}%)`,
           }}
-        >
-          {clouds.map((cloud) => (
-            <img
-              key={cloud.id}
-              src={cloud.src}
-              alt={`Cloud ${cloud.id}`}
-              className={`cloud cloud-${cloud.side}`}
-              style={{
-                "--float-duration": cloud.floatDuration,
-                "--rise-duration": cloud.riseDuration,
-                // SCHEDULE: uncomment after add schedule
-                // "--rise-offset": `${(1 - scrollProgress) * 80}px`,
-                // "--slide-offset": `${(1 - scrollProgress) * 100}vh`,
-                top: cloud.top,
-                bottom: cloud.bottom,
-                opacity: cloud.opacity,
-                left: cloud.left,
-                right: cloud.right,
-                height: cloud.height,
-                width: "auto",
-              }}
-            />
-          ))}
-        </div>
-
+        ></div>{" "}
         {/* Fixed content in center */}
         <div className="about-content fixed-content">
-          {/* SCHEDULE: UNCOMMENT AND REPLACE */}
-          {/* <div className={`about-copy ${isAtEnd ? "is-hidden" : "is-visible"}`}> */}
-          <div className={`about-copy is-visible`}>
+          <div
+            className={`about-copy ${showSchedule ? "is-hidden" : "is-visible"}`}
+          >
             <h2>Info about CS ball</h2>
             <p>
               Hey there, stranger. Are you ready for a night of intrigue you
@@ -176,8 +139,9 @@ function AboutSection() {
               miss.
             </p>
           </div>
-          {/* SCHEDULE: uncomment after add schedule */}
-          {/* <div className={`about-copy ${isAtEnd ? "is-visible" : "is-hidden"}`}>
+          <div
+            className={`about-copy ${showSchedule ? "is-visible" : "is-hidden"}`}
+          >
             <div className="program-list">
               <ProgramItem
                 align="right"
@@ -216,8 +180,40 @@ function AboutSection() {
                 offsetX="5rem"
               />
             </div>
-          </div> */}
+          </div>
         </div>
+      </div>
+
+      {/* clouds */}
+      <div
+        className="clouds-container"
+        style={{
+          // transform: `translateY(${-cloudsExitProgress * 100}vh)`,
+          // opacity: 1 - cloudsExitProgress,
+          transition: "transform 0.8s ease-out, opacity 0.8s ease-out",
+        }}
+      >
+        {clouds.map((cloud) => (
+          <img
+            key={cloud.id}
+            src={cloud.src}
+            alt={`Cloud ${cloud.id}`}
+            className={`cloud cloud-${cloud.side}`}
+            style={{
+              "--float-duration": cloud.floatDuration,
+              "--rise-duration": cloud.riseDuration,
+              "--rise-offset": `${(1 - scrollProgress) * 80}px`,
+              "--slide-offset": `${(1 - scrollProgress) * 100}vh`,
+              top: cloud.top,
+              bottom: cloud.bottom,
+              opacity: cloud.opacity,
+              left: cloud.left,
+              right: cloud.right,
+              height: cloud.height,
+              width: "auto",
+            }}
+          />
+        ))}
       </div>
     </section>
   );

@@ -6,12 +6,10 @@
   justify-content: center;
   align-items: center;
   padding: 100px 20px;
-  /* background-color: var(--color-burgundy); */
   background: linear-gradient(to top, var(--color-dark), var(--color-burgundy));
   text-align: center;
   scroll-snap-align: start;
-  /* FIXME: could break clouds. used to be -10 for cloud overlay */
-  z-index: 10;
+  z-index: 1;
 }
 
 .countdown-title {

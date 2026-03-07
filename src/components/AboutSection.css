@@ -1,8 +1,6 @@
 .about-section {
   width: 100vw;
-  /* height: 200vh; */
-  /* SCHEDULE: fix after add schedule */
-  height: 100vh;
+  height: 200vh;
   background: var(--color-cream);
   position: relative;
   scroll-snap-align: start;
@@ -72,7 +70,6 @@
   transition: transform var(--rise-duration, 0.9s) ease-out;
   transform: translateY(var(--slide-offset, 120px));
   animation: float var(--float-duration, 8s) ease-in-out infinite;
-  display: none; /* SCHEDULE: fix after add schedule */
 }
 
 @keyframes float {
@@ -92,6 +89,7 @@
 
 .fixed-content {
   position: absolute;
+  top: 0;
   left: 50%;
   transform: translateX(-50%);
   z-index: 3;
@@ -190,8 +188,6 @@
 
   .cloud {
     display: none;
-    /* scale: 0.5;
-    opacity: 1; */
   }
 }
 
