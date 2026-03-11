@@ -10,8 +10,8 @@ function CountdownSection() {
   });
 
   useEffect(() => {
-    // drop date is 12pm 27 feb GMT
-    const dropDate = new Date("2026-02-27T12:00:00Z");
+    // drop date is 18:30pm 4 apr GMT
+    const dropDate = new Date("2026-04-04T18:30:00Z");
     const calculateTimeLeft = () => {
       const now = new Date();
       const timeDiff = dropDate - now;
@@ -34,9 +34,9 @@ function CountdownSection() {
 
   return (
     <section className="countdown-section" data-logo-color="gold">
-      <h2 className="countdown-title">Dinner Tickets</h2>
+      <h2 className="countdown-title">Tickets have already Dropped!</h2>
       <div className="countdown-timer">
-        <p className="countdown-subtitle">will drop in...</p>
+        <p className="countdown-subtitle">The Ball will start in...</p>
         <div className="timer">
           <div className="time-segment">
             <span className="number">

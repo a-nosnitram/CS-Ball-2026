@@ -182,8 +182,6 @@ function AboutSection() {
       <div
         className="clouds-container"
         style={{
-          // transform: `translateY(${-cloudsExitProgress * 100}vh)`,
-          // opacity: 1 - cloudsExitProgress,
           transition: "transform 0.8s ease-out, opacity 0.8s ease-out",
         }}
       >
