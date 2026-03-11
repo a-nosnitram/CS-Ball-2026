@@ -145,38 +145,32 @@ function AboutSection() {
             <div className="program-list">
               <ProgramItem
                 align="right"
-                time="19:30–20:30"
-                description="Dinner service and welcome"
+                time="18:30–19:00"
+                description="Dinner reception"
                 offsetX="5rem"
               />
               <ProgramItem
                 align="left"
-                time="20:30–21:15"
-                description="Ceilidh and live music."
+                time="19:00–21:30"
+                description="Dinner"
                 offsetX="5rem"
               />
               <ProgramItem
                 align="right"
-                time="21:15–22:00"
-                description="Photographer + DJ."
+                time="21:30–00:00"
+                description="Afterparty"
                 offsetX="5rem"
               />
               <ProgramItem
                 align="left"
-                time="22:00–23:00"
-                description="DJ set and dance floor."
+                time="21:30–22:30"
+                description="Ceilidh & games"
                 offsetX="5rem"
               />
               <ProgramItem
                 align="right"
-                time="23:00–23:30"
-                description="Afterparty begins."
-                offsetX="5rem"
-              />
-              <ProgramItem
-                align="left"
-                time="23:30–00:00"
-                description="After-afterparty."
+                time="22:30–00:00"
+                description="DJ set"
                 offsetX="5rem"
               />
             </div>
